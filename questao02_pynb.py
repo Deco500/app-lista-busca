@@ -86,7 +86,7 @@ class ListaDividida:
  
          return True, f"Chave {key} inserida na cauda com sucesso."
  
-    def _intercalar(self):
+def _intercalar(self):
          self.tail.sort()
          new_sorted = []
          i, j = 0, 0
