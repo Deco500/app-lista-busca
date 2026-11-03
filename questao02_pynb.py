@@ -112,7 +112,7 @@ def _intercalar(self):
 st.set_page_config(page_title="Lista Dividida e Intercalação", layout="wide")
  
 # Inicialização da estrutura na sessão para persistência dos dados
- if 'estrutura' not in st.session_state:
+if 'estrutura' not in st.session_state:
      st.session_state.estrutura = ListaDividida(seed=42, initial_size=1024)
  
 est = st.session_state.estrutura
