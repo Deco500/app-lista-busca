@@ -149,7 +149,7 @@ st.divider()
  
 # Exibição de Métricas
 st.subheader("Estado Atual da Estrutura")
- m1, m2 = st.columns(2)
+m1, m2 = st.columns(2)
  m1.metric("Tamanho da Região Ordenada", len(est.sorted_region))
  m2.metric("Tamanho da Cauda (Max 10)", len(est.tail))
  
