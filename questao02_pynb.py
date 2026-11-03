@@ -119,7 +119,7 @@ est = st.session_state.estrutura
  
 st.title("Estrutura de Busca: Região Ordenada + Cauda")
  
- col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
  
 with col1:
      st.subheader("Inserir Elemento")
