@@ -15,7 +15,7 @@ import random
  # ==========================================
  # LÓGICA DA ESTRUTURA DE DADOS
  # ==========================================
- class ListaDividida:
+class ListaDividida:
      def __init__(self, seed=42, initial_size=1024):
          random.seed(seed)
          # Gera 1024 inteiros distintos ordenados. Intervalo amplo para evitar colisões
