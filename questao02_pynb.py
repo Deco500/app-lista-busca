@@ -150,30 +150,30 @@ st.divider()
 # Exibição de Métricas
 st.subheader("Estado Atual da Estrutura")
 m1, m2 = st.columns(2)
- m1.metric("Tamanho da Região Ordenada", len(est.sorted_region))
- m2.metric("Tamanho da Cauda (Max 10)", len(est.tail))
+m1.metric("Tamanho da Região Ordenada", len(est.sorted_region))
+m2.metric("Tamanho da Cauda (Max 10)", len(est.tail))
  
- st.write("**Elementos na Cauda:**", est.tail)
+st.write("**Elementos na Cauda:**", est.tail)
  
 st.divider()
  
 # Exibição dos Componentes Streamlit Utilizados (Requisito 7)
- st.subheader("Componentes Streamlit Utilizados no Projeto")
+st.subheader("Componentes Streamlit Utilizados no Projeto")
  
- st.markdown("**1. Criação de Colunas (`st.columns`)**")
- st.code("col1, col2 = st.columns(2)", language="python")
+st.markdown("**1. Criação de Colunas (`st.columns`)**")
+st.code("col1, col2 = st.columns(2)", language="python")
  
- st.markdown("**2. Entrada de Número (`st.number_input`)**")
- st.code("novo_valor = st.number_input('Digite um número inteiro para inserir:', step=1)", language="python")
+st.markdown("**2. Entrada de Número (`st.number_input`)**")
+st.code("novo_valor = st.number_input('Digite um número inteiro para inserir:', step=1)", language="python")
  
- st.markdown("**3. Botões (`st.button`)**")
- st.code('if st.button("Inserir", type="primary"):', language="python")
+st.markdown("**3. Botões (`st.button`)**")
+st.code('if st.button("Inserir", type="primary"):', language="python")
  
- st.markdown("**4. Exibição de Alertas (`st.success` / `st.error` / `st.warning`)**")
- st.code('st.success("Encontrado em: Região Ordenada")\nst.error("A chave já existe.")', language="python")
+st.markdown("**4. Exibição de Alertas (`st.success` / `st.error` / `st.warning`)**")
+st.code('st.success("Encontrado em: Região Ordenada")\nst.error("A chave já existe.")', language="python")
  
- st.markdown("**5. Métricas de Status (`st.metric`)**")
- st.code('st.metric("Tamanho da Cauda", len(est.tail))', language="python")
+st.markdown("**5. Métricas de Status (`st.metric`)**")
+st.code('st.metric("Tamanho da Cauda", len(est.tail))', language="python")
  
 st.markdown("**6. Gerenciamento de Estado (`st.session_state`)**")
 st.code('''if 'estrutura' not in st.session_state:
