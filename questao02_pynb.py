@@ -109,19 +109,19 @@ def _intercalar(self):
  # ==========================================
  # INTERFACE STREAMLIT
  # ==========================================
- st.set_page_config(page_title="Lista Dividida e Intercalação", layout="wide")
+st.set_page_config(page_title="Lista Dividida e Intercalação", layout="wide")
  
- # Inicialização da estrutura na sessão para persistência dos dados
+# Inicialização da estrutura na sessão para persistência dos dados
  if 'estrutura' not in st.session_state:
      st.session_state.estrutura = ListaDividida(seed=42, initial_size=1024)
  
- est = st.session_state.estrutura
+est = st.session_state.estrutura
  
- st.title("Estrutura de Busca: Região Ordenada + Cauda")
+st.title("Estrutura de Busca: Região Ordenada + Cauda")
  
  col1, col2 = st.columns(2)
  
- with col1:
+with col1:
      st.subheader("Inserir Elemento")
      novo_valor = st.number_input("Digite um número inteiro para inserir:", step=1, key="insert_input")
      if st.button("Inserir", type="primary"):
@@ -131,7 +131,7 @@ def _intercalar(self):
          else:
              st.error(msg)
  
- with col2:
+with col2:
      st.subheader("Buscar Elemento")
      valor_busca = st.number_input("Digite um número inteiro para buscar:", step=1, key="search_input")
      if st.button("Buscar"):
@@ -145,9 +145,9 @@ def _intercalar(self):
          st.write(f"**Iterações na Busca Sequencial:** {resultado['seq_iters']}")
          st.write(f"**Total de Iterações:** {resultado['total_iters']}")
  
- st.divider()
+st.divider()
  
- # Exibição de Métricas
+# Exibição de Métricas
  st.subheader("Estado Atual da Estrutura")
  m1, m2 = st.columns(2)
  m1.metric("Tamanho da Região Ordenada", len(est.sorted_region))
@@ -155,7 +155,7 @@ def _intercalar(self):
  
  st.write("**Elementos na Cauda:**", est.tail)
  
- st.divider()
+st.divider()
  
 # Exibição dos Componentes Streamlit Utilizados (Requisito 7)
  st.subheader("Componentes Streamlit Utilizados no Projeto")
