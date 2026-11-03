@@ -95,7 +95,7 @@ def _intercalar(self):
          while i < len(self.sorted_region) and j < len(self.tail):
              if self.sorted_region[i] < self.tail[j]:
                  new_sorted.append(self.sorted_region[i])
-                i += 1
+                 i += 1
              else:
                  new_sorted.append(self.tail[j])
                  j += 1
